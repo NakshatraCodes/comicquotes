@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/comicquotes/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/comicquotes/static/js/main.597fd39a.chunk.js",
-    "main.js.map": "/comicquotes/static/js/main.597fd39a.chunk.js.map",
+    "main.js": "/comicquotes/static/js/main.277a245d.chunk.js",
+    "main.js.map": "/comicquotes/static/js/main.277a245d.chunk.js.map",
     "runtime-main.js": "/comicquotes/static/js/runtime-main.501e0d30.js",
     "runtime-main.js.map": "/comicquotes/static/js/runtime-main.501e0d30.js.map",
     "static/js/2.428f12bb.chunk.js": "/comicquotes/static/js/2.428f12bb.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.501e0d30.js",
     "static/js/2.428f12bb.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.597fd39a.chunk.js"
+    "static/js/main.277a245d.chunk.js"
   ]
 }
