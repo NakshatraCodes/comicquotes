@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/comicquotes/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/comicquotes/static/js/main.453c9524.chunk.js",
+    "main.js.map": "/comicquotes/static/js/main.453c9524.chunk.js.map",
+    "runtime-main.js": "/comicquotes/static/js/runtime-main.501e0d30.js",
+    "runtime-main.js.map": "/comicquotes/static/js/runtime-main.501e0d30.js.map",
+    "static/js/2.9686e655.chunk.js": "/comicquotes/static/js/2.9686e655.chunk.js",
+    "static/js/2.9686e655.chunk.js.map": "/comicquotes/static/js/2.9686e655.chunk.js.map",
+    "static/js/3.f10d0a73.chunk.js": "/comicquotes/static/js/3.f10d0a73.chunk.js",
+    "static/js/3.f10d0a73.chunk.js.map": "/comicquotes/static/js/3.f10d0a73.chunk.js.map",
+    "index.html": "/comicquotes/index.html",
+    "static/css/main.6dea0f05.chunk.css.map": "/comicquotes/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.9686e655.chunk.js.LICENSE.txt": "/comicquotes/static/js/2.9686e655.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.501e0d30.js",
+    "static/js/2.9686e655.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.453c9524.chunk.js"
+  ]
+}
