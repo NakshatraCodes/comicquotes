@@ -18,7 +18,6 @@ import Cards from "./Cards";
 import Theme from "../helpers/theme";
 
 import quote from "../api/quotes";
-import keys from "../keys";
 
 const useStyles = makeStyles(Theme);
 
@@ -33,7 +32,7 @@ export default function MyCard() {
   useEffect(() => {
     (async () => {
       try {
-        const response = await quote.get(`/api/${keys.API_KEY}/quote?num=30`);
+        const response = await quote.get(`/api/aqwTa/quote?num=30`);
         setData(response.data);
         setQuotes(response.data);
         setShowLoader(false);

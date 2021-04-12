@@ -93,12 +93,7 @@ const Register = () => {
               </form>
               {(() => {
                 if (showLoader) {
-                  return (
-                    <CircularProgress
-                      color="secondary"
-                      style={{ marginLeft: "calc(50% - 10px)" }}
-                    />
-                  );
+                  return <CircularProgress color="secondary" />;
                 }
               })()}
 

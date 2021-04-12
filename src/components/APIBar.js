@@ -28,7 +28,7 @@ const APIBar = ({ title, url, desc, color }) => {
     desc: {
       marginLeft: "20px",
       fontWeight: "400",
-      fontSize: 16,
+      fontSize: 13,
     },
   };
 
@@ -60,7 +60,7 @@ const APIBar = ({ title, url, desc, color }) => {
   }
   return (
     <Typography
-      variant="h6"
+      variant="subtitle2"
       color="textPrimary"
       align="center"
       style={styles.bar}
