@@ -1,7 +1,7 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
 
-const Badge = ({ name }) => {
+const Badge = ({ name, color }) => {
   const styles = {
     marginTop: "20px",
     padding: "5px 15px",
@@ -12,6 +12,9 @@ const Badge = ({ name }) => {
     maxWidth: "max-content",
     marginRight: "6px",
   };
+  if (color === "green") {
+    styles.backgroundColor = "#5eb761";
+  }
   return (
     <Typography
       variant="subtitle1"

@@ -6,11 +6,13 @@ import Container from "@material-ui/core/Container";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import { Alert, AlertTitle } from "@material-ui/lab";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 import { makeStyles } from "@material-ui/core/styles";
 
 import Nav from "../partials/Nav";
 import Footer from "../partials/Footer";
+import Badge from "./Badge";
 import muiTheme from "../helpers/muiTheme";
 
 import Theme from "../helpers/theme";
@@ -23,12 +25,15 @@ const theme = createMuiTheme(muiTheme);
 const Register = () => {
   const [email, setEmail] = useState("");
   const [alert, setAlert] = useState(false);
-  const [alertMsg, setAlertMsg] = useState({ status: "", msg: "" });
+  const [alertMsg, setAlertMsg] = useState({ status: "", msg: "", key: "" });
+  const [showLoader, setShowLoader] = useState(false);
 
   const handleRequest = async (e) => {
     e.preventDefault();
+    setShowLoader(true);
     const { data } = await quote.post(`/register`, { email });
-    setAlertMsg({ status: data.status, msg: data.msg });
+    setShowLoader(false);
+    setAlertMsg({ status: data.status, msg: data.msg, key: data.key });
     console.log(data);
     setAlert(true);
   };
@@ -60,7 +65,7 @@ const Register = () => {
               You will need an API Key to use this service, please generate one
               by registering with your email
             </Typography>
-            <Container>
+            <Container align="center">
               <form className={classes.form} noValidate>
                 <TextField
                   variant="outlined"
@@ -86,13 +91,35 @@ const Register = () => {
                   Request API Key
                 </Button>
               </form>
+              {(() => {
+                if (showLoader) {
+                  return (
+                    <CircularProgress
+                      color="secondary"
+                      style={{ marginLeft: "calc(50% - 10px)" }}
+                    />
+                  );
+                }
+              })()}
+
               {alert ? (
-                <Alert severity={alertMsg.status} variant="outlined">
-                  <AlertTitle>
-                    {alertMsg.status === "success" ? "Success" : "Error"}
-                  </AlertTitle>
-                  {alertMsg.msg}
-                </Alert>
+                <React.Fragment>
+                  <Alert severity={alertMsg.status} variant="outlined">
+                    <AlertTitle>
+                      {alertMsg.status === "success" ? "Success" : "Error"}
+                    </AlertTitle>
+                    {alertMsg.msg}
+                  </Alert>
+                  {alertMsg.key ? (
+                    <Badge
+                      name={alertMsg.key}
+                      color="green"
+                      style={{ marginLeft: "calc(50% - 50px)" }}
+                    />
+                  ) : (
+                    ""
+                  )}
+                </React.Fragment>
               ) : (
                 ""
               )}
