@@ -42,7 +42,7 @@ const Register = () => {
             </div>
             <APIBar
               title="Base URL"
-              url="https://comicquotes.herokuapp.com/<apiKey>"
+              url="https://comicquotes.herokuapp.com/api/<apiKey>"
               color="red"
             />
             <Typography
