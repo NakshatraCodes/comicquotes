@@ -98,6 +98,8 @@ const Register = () => {
               <Badge name="spiderman" />
               <Badge name="batman" />
               <Badge name="greenarrow" />
+              <Badge name="wonderwoman" />
+              <Badge name="captainamerica" />
             </div>
           </Container>
           <Footer />
